@@ -10,6 +10,7 @@
   margin-top: -10rem;
   margin-bottom: -1px;
   color: $white-color;
+  display: flex;
 
   @include respond(tab-land) {
     padding: 10rem 0;
@@ -35,5 +36,59 @@
         font-size: 2rem;
       }
     }
+  }
+}
+.email {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+
+}
+
+label {
+  margin-bottom: 6px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+@keyframes colorChange {
+  0% { color: blue; } /* Starting color */
+  50% { color: red; } /* Midway color change */
+  100% { color: green; } /* Final color */
+}
+.p-section {
+  float: left;
+  width: 0%; /* Adjust the width as per your design */
+  font-weight: bold;
+  color: blue;
+  animation: colorChange 3s infinite;
+  font-size: xx-large;
+  p {
+    font-size: 4vw;
+  }
+  
+  span {
+    font-size: 8vw;
+    transform: rotate(-3deg);
   }
 }

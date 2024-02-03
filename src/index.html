@@ -40,10 +40,11 @@
 
   <!-- Todo: read the following HTML Todos to create your stunning portfolio website -->
   <body>
-    <div id="top"></div>
+
 
     <!-- **** Hero Section **** -->
     <section id="hero" class="jumbotron">
+      
       <div class="container">
         <h1 class="hero-title load-hidden">
           Hi, my name is <span class="text-color-main">Your Name</span>
@@ -79,11 +80,10 @@
           <div class="col-md-6 col-sm-12">
             <div class="about-wrapper__info load-hidden">
               <p class="about-wrapper__info-text">
-                This is where you can describe about yourself. The more you
-                describe about yourself, the more chances you have!
+                Seasoned IT professional specializing in DevOps methodology, Cloud Engineering, Cloud Security, and Identity Access Management. Proven track record as an Azure Solution Architect, adept at optimizing workflows, ensuring security, and architecting scalable cloud solutions. Expertise includes end-to-end DevOps lifecycles, robust cloud infrastructure design, and translating business objectives into tailored Azure solutions. Results-driven with a commitment to excellence, offering a unique blend of technical proficiency and strategic thinking.
               </p>
               <p class="about-wrapper__info-text">
-                Extra Information about you! like hobbies and your goals.
+                Proudly certified in Devops, Cybersecurity and Azure Solution Architect.
               </p>
               <span class="d-flex mt-3">
                 <a
@@ -102,17 +102,17 @@
     </section>
     <!-- /END About Section -->
 
-    <!-- **** Projects Section **** -->
+    <!-- **** Proficiency Section **** -->
     <section id="projects">
       <div class="container">
         <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Projects</h2>
+          <h2 class="section-title dark-blue-text">Proficiency</h2>
 
           <!-- Notice: each .row is a project -->
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Project Title 0</h3>
+                <h3 class="project-wrapper__text-title">DevOps/Cloud Engineering</h3>
                 <div>
                   <p class="mb-4">
                     Describe the project being very specific, you can use the Twitter standard: no more than 280 characters: 
@@ -151,7 +151,7 @@
                     <img
                       alt="Project Image"
                       class="img-fluid"
-                      src="assets/project.jpg"
+                      src="assets/devops.jpg"
                     />
                   </div>
                 </a>
@@ -164,7 +164,7 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Project Title 1</h3>
+                <h3 class="project-wrapper__text-title">Cybersecurity</h3>
                 <div>
                   <p class="mb-4">
                     Demonstrate in this description the skills of a programmer: such as having commitment, 
@@ -203,7 +203,7 @@
                     <img
                       alt="Project Image"
                       class="img-fluid"
-                      src="assets/project.jpg"
+                      src="assets/cyber.jpg"
                     />
                   </div>
                 </a>
@@ -216,7 +216,7 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Project Title 2</h3>
+                <h3 class="project-wrapper__text-title">Azure Solution Architect</h3>
                 <div>
                   <p class="mb-4">
                     If the project was collaborative, reflect it in this description, that will demonstrate communication and/or leadership skills. 
@@ -254,7 +254,7 @@
                     <img
                       alt="Project Image"
                       class="img-fluid"
-                      src="assets/project.jpg"
+                      src="assets/cld.jpg"
                     />
                   </div>
                 </a>
@@ -271,7 +271,7 @@
     <section id="contact">
       <div class="container">
         <h2 class="section-title">Contact</h2>
-        <div class="contact-wrapper load-hidden">
+        <!-- <div class="contact-wrapper load-hidden">
           <p class="contact-wrapper__text">[Put your call to action here]</p>
           <a
             rel="noreferrer"
@@ -280,6 +280,60 @@
             href="mailto:example@email.com"
             >Call to Action</a
           >
+        </div> -->
+        <div class="p-section">
+          <!-- <p>Let's Chat! </p> -->
+          <p>Let's <br have a />Chat!</span></p>
+        </div>
+        <div class="email">
+          <form method="GET" action="mailto:greentealive@outlook.com" enctype="text/plain">
+            <div style="font-size: medium;">Subject</div>
+            <input type="text" name="Subject" />
+        
+            <div style="font-size: medium;">Name</div>
+            <input name="Name" />
+        
+            <div style="font-size: medium;">E-Mail</div>
+            <input name="E-Mail Address" />
+        
+            <div style="font-size: medium;">Message</div>
+            <textarea name="Message" style="font-size: large;"></textarea>
+        
+            <br/>
+            <input style="background-color: rgb(52, 168, 197); color: white;" onmouseover="this.style.backgroundColor='darkred'; this.style.color='black';" onmouseout="this.style.backgroundColor='green'; this.style.color='white';" type="submit" value="Send" />
+        
+            <input type="hidden" name="body" />
+        </form>
+        <script>
+          var form = document.getElementsByTagName('form')[0];
+          form.addEventListener('submit',contact,false);
+          function contact(e) {
+             // Prevent Default Form Submission
+             e.preventDefault();
+       
+             var target = e.target || e.srcElement;
+             var i = 0;
+             var message = '';
+       
+             // Loop Through All Input Fields
+             for(i = 0; i < target.length; ++i) {
+                // Check to make sure it's a value. Don't need to include Buttons
+                if(target[i].type != 'text' && target[i].type != 'textarea') {
+                       // Skip to next input since this one doesn't match our rules
+                   continue;
+                }
+       
+                // Add Input Name and value followed by a line break
+                message += target[i].name + ': ' + target[i].value + "\r\n";
+             }
+             // Modify the hidden body input field that is required for the mailto: scheme
+             target.elements["body"].value = message;
+       
+             // Submit the form since we previously stopped it. May cause recursive loop in some browsers? Should research this.
+             this.submit();
+          }
+       </script>
+
         </div>
       </div>
     </section>
@@ -307,9 +361,9 @@
 
         <!-- Notice: if you want to give me some credit, it will be huge for me! if not, put your data on it -->
         <p class="footer__text">
-          © 2021 - Template developed by
-          <a rel="noreferrer" href="https://github.com/cobiwave" target="_blank"
-            >Jacobo Martínez</a
+          © 2023 - Developed by
+          <a rel="noreferrer" href="https://github.com/tekshare" target="_blank"
+            >Isaac .O</a
           >
         </p>
 
